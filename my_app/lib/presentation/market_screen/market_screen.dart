@@ -95,8 +95,12 @@ class MarketScreen extends GetWidget<MarketController> {
                                                   child: Obx(() => ListView.builder(
                                                       scrollDirection: Axis.horizontal,
                                                       physics: BouncingScrollPhysics(),
-                                                      itemCount: this.controller
-                                                          .marketModelObj.value.listrectanglethirtyItemList.length,
+                                                      itemCount: this
+                                                          .controller
+                                                          .marketModelObj
+                                                          .value
+                                                          .listrectanglethirtyItemList
+                                                          .length,
                                                       itemBuilder: (context, index) {
                                                         ListrectanglethirtyItemModel model = controller
                                                             .marketModelObj.value.listrectanglethirtyItemList[index];

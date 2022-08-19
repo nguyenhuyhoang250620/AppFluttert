@@ -6,7 +6,7 @@ class FeedController extends GetxController {
   TextEditingController inputSearchController2 = TextEditingController();
 
   Rx<FeedModel> feedModelObj = FeedModel().obs;
-  
+
   @override
   void onReady() {
     super.onReady();

@@ -67,26 +67,11 @@ class _MainPageState extends State<MainPage> {
       type: BottomNavigationBarType.fixed,
       onTap: _getChangeBottomNav,
       items: [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home), 
-          label: "Home"
-          ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.date_range), 
-          label: "Task"
-          ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.apps), 
-          label: "Apps"
-          ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.notification_important), 
-          label: 'Notification'
-          ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person), 
-          label: "Profile"
-          ),
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.date_range), label: "Task"),
+        BottomNavigationBarItem(icon: Icon(Icons.apps), label: "Apps"),
+        BottomNavigationBarItem(icon: Icon(Icons.notification_important), label: 'Notification'),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
       ],
     );
   }

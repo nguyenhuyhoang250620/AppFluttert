@@ -23,16 +23,16 @@ class InsightsScreen extends GetWidget<InsightsController> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  GestureDetector(
-                                      onTap: () {
-                                        onTapImgArrowleft();
-                                      },
-                                      child: Padding(
-                                          padding: getPadding(top: 1, bottom: 10),
-                                          child: CommonImageView(
-                                              svgPath: ImageConstant.imgArrowleft,
-                                              height: getVerticalSize(12.00),
-                                              width: getHorizontalSize(16.00)))),
+                                  // GestureDetector(
+                                  //     onTap: () {
+                                  //       onTapImgArrowleft();
+                                  //     },
+                                  //     child: Padding(
+                                  //         padding: getPadding(top: 1, bottom: 10),
+                                  //         child: CommonImageView(
+                                  //             svgPath: ImageConstant.imgArrowleft,
+                                  //             height: getVerticalSize(12.00),
+                                  //             width: getHorizontalSize(16.00)))),
                                   Padding(
                                       padding: getPadding(left: 114),
                                       child: Text("lbl_insights".tr,
@@ -141,69 +141,6 @@ class InsightsScreen extends GetWidget<InsightsController> {
                                       ]))
                             ])))),
                   ),
-                  Container(
-                      height: getVerticalSize(100.00),
-                      width: size.width,
-                      margin: getMargin(top: 0),
-                      child: Stack(alignment: Alignment.topLeft, children: [
-                        Align(
-                            alignment: Alignment.topLeft,
-                            child: Container(
-                                margin: getMargin(top: 8, bottom: 10),
-                                child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                          height: getVerticalSize(1.00),
-                                          width: size.width,
-                                          decoration: BoxDecoration(color: ColorConstant.bluegray200)),
-                                      Container(
-                                          decoration: AppDecoration.fillGray50,
-                                          child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.start,
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 57, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.lightBlueA700,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 41, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.indigo50,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 41, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.indigo50,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 41, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.indigo50,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 41, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.indigo50,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66))))
-                                              ]))
-                                    ])))
-                      ]))
                 ],
               ),
             )));
