@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/foundation.dart';
 
 import 'controller/sign_up_controller.dart';
@@ -6,10 +8,18 @@ import 'package:my_app/core/app_export.dart';
 import 'package:my_app/core/utils/validation_functions.dart';
 import 'package:my_app/widgets/custom_button.dart';
 import 'package:my_app/widgets/custom_text_form_field.dart';
-
+import 'package:get/get.dart';
 
 // ignore_for_file: must_be_immutable
-class SignUpScreen extends GetWidget<SignUpController> {
+class SignUpScreen extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _SignUpScreen();
+  }
+}
+
+class _SignUpScreen extends State<SignUpScreen> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool isChecked = false;
   @override
@@ -51,16 +61,6 @@ class SignUpScreen extends GetWidget<SignUpController> {
                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                 mainAxisSize: MainAxisSize.max,
                                                                 children: [
-                                                                  GestureDetector(
-                                                                      onTap: () {
-                                                                        onTapImgArrowleft();
-                                                                      },
-                                                                      child: Padding(
-                                                                          padding: getPadding(top: 1, bottom: 10),
-                                                                          child: CommonImageView(
-                                                                              svgPath: ImageConstant.imgArrowleft,
-                                                                              height: getVerticalSize(12.00),
-                                                                              width: getHorizontalSize(16.00)))),
                                                                   Padding(
                                                                       padding: getPadding(left: 115),
                                                                       child: Text("lbl_sign_up".tr,
@@ -73,7 +73,7 @@ class SignUpScreen extends GetWidget<SignUpController> {
                                       CustomTextFormField(
                                           width: 327,
                                           focusNode: FocusNode(),
-                                          controller: controller.inputTextController,
+                                          // controller: controller.inputTextController,
                                           hintText: "lbl_name".tr,
                                           margin: getMargin(left: 24, top: 48, right: 24),
                                           variant: TextFormFieldVariant.OutlineIndigo50,
@@ -89,7 +89,7 @@ class SignUpScreen extends GetWidget<SignUpController> {
                                       CustomTextFormField(
                                           width: 327,
                                           focusNode: FocusNode(),
-                                          controller: controller.inputTextOneController,
+                                          // controller: controller.inputTextOneController,
                                           hintText: "lbl_email".tr,
                                           margin: getMargin(left: 24, top: 16, right: 24),
                                           variant: TextFormFieldVariant.OutlineIndigo50,
@@ -150,11 +150,14 @@ class SignUpScreen extends GetWidget<SignUpController> {
                                                   mainAxisSize: MainAxisSize.max,
                                                   children: [
                                                     Checkbox(
-                                                        checkColor: Colors.white,
-                                                        value: isChecked,
-                                                        onChanged: (bool? value) {
-                                                        },
-                                                      ),
+                                                      checkColor: Colors.white,
+                                                      value: isChecked,
+                                                      onChanged: (bool? value) {
+                                                        setState(() {
+                                                          isChecked = value!;
+                                                        });
+                                                      },
+                                                    ),
                                                     Container(
                                                         width: getHorizontalSize(250.00),
                                                         margin: getMargin(left: 8, top: 4),

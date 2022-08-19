@@ -27,10 +27,6 @@ class ProfilePostsScreen extends GetWidget<ProfilePostsController> {
                                   mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-
-
-
-                                    
                                 Align(
                                     alignment: Alignment.centerRight,
                                     child: Padding(

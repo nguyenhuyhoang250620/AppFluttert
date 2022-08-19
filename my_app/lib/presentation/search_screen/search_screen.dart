@@ -11,7 +11,10 @@ class SearchScreen extends GetWidget<SearchController> {
             backgroundColor: ColorConstant.whiteA700,
             body: Container(
                 width: size.width,
-                child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Expanded(child: 
+                      SingleChildScrollView(
                     child: Container(
                         child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -34,16 +37,6 @@ class SearchScreen extends GetWidget<SearchController> {
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              GestureDetector(
-                                                  onTap: () {
-                                                    onTapImgArrowleft();
-                                                  },
-                                                  child: Padding(
-                                                      padding: getPadding(top: 2, bottom: 5),
-                                                      child: CommonImageView(
-                                                          svgPath: ImageConstant.imgArrowleft,
-                                                          height: getVerticalSize(12.00),
-                                                          width: getHorizontalSize(16.00)))),
                                               Padding(
                                                   padding: getPadding(left: 112),
                                                   child: Text("lbl_content".tr,
@@ -64,7 +57,7 @@ class SearchScreen extends GetWidget<SearchController> {
                                 CustomTextFormField(
                                     width: 327,
                                     focusNode: FocusNode(),
-                                    controller: controller.inputSearchController,
+                                    // controller: controller.inputSearchController,
                                     hintText: "lbl_search".tr,
                                     margin: getMargin(left: 24, right: 24),
                                     variant: TextFormFieldVariant.FillGray51,
@@ -137,56 +130,12 @@ class SearchScreen extends GetWidget<SearchController> {
                                     width: getHorizontalSize(327.00),
                                     margin: getMargin(left: 24, top: 15, right: 24),
                                     decoration: BoxDecoration(color: ColorConstant.indigo50)),
-                                Container(
-                                    height: getVerticalSize(1.00),
-                                    width: size.width,
-                                    margin: getMargin(top: 230),
-                                    decoration: BoxDecoration(color: ColorConstant.bluegray200)),
-                                Container(
-                                    decoration: AppDecoration.fillGray50,
-                                    child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Container(
-                                              height: getSize(21.00),
-                                              width: getSize(21.00),
-                                              margin: getMargin(left: 57, top: 20, bottom: 40),
-                                              decoration: BoxDecoration(
-                                                  color: ColorConstant.lightBlueA700,
-                                                  borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                          Container(
-                                              height: getSize(21.00),
-                                              width: getSize(21.00),
-                                              margin: getMargin(left: 41, top: 20, bottom: 40),
-                                              decoration: BoxDecoration(
-                                                  color: ColorConstant.indigo50,
-                                                  borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                          Container(
-                                              height: getSize(21.00),
-                                              width: getSize(21.00),
-                                              margin: getMargin(left: 41, top: 20, bottom: 40),
-                                              decoration: BoxDecoration(
-                                                  color: ColorConstant.indigo50,
-                                                  borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                          Container(
-                                              height: getSize(21.00),
-                                              width: getSize(21.00),
-                                              margin: getMargin(left: 41, top: 20, bottom: 40),
-                                              decoration: BoxDecoration(
-                                                  color: ColorConstant.indigo50,
-                                                  borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                          Container(
-                                              height: getSize(21.00),
-                                              width: getSize(21.00),
-                                              margin: getMargin(left: 41, top: 20, bottom: 40),
-                                              decoration: BoxDecoration(
-                                                  color: ColorConstant.indigo50,
-                                                  borderRadius: BorderRadius.circular(getHorizontalSize(10.66))))
-                                        ]))
+                               
                               ]))
-                    ]))))));
+                    ])))
+                    ,)
+                  ],
+                ))));
   }
 
   onTapImgArrowleft() {

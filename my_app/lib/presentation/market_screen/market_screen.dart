@@ -29,59 +29,6 @@ class MarketScreen extends GetWidget<MarketController> {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                             Align(
-                                alignment: Alignment.centerRight,
-                                child: Padding(
-                                    padding: getPadding(left: 14, top: 17, right: 14),
-                                    child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Padding(
-                                              padding: getPadding(bottom: 1),
-                                              child: CommonImageView(
-                                                  svgPath: ImageConstant.imgMusic,
-                                                  height: getVerticalSize(11.00),
-                                                  width: getHorizontalSize(28.00))),
-                                          Padding(
-                                              padding: getPadding(left: 231, top: 1, bottom: 1),
-                                              child: Row(
-                                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  children: [
-                                                    Padding(
-                                                        padding: getPadding(top: 1, bottom: 1),
-                                                        child: CommonImageView(
-                                                            svgPath: ImageConstant.imgMobilesignal,
-                                                            height: getVerticalSize(10.00),
-                                                            width: getHorizontalSize(17.00))),
-                                                    Padding(
-                                                        padding: getPadding(left: 5, bottom: 1),
-                                                        child: CommonImageView(
-                                                            svgPath: ImageConstant.imgWifi,
-                                                            height: getVerticalSize(10.00),
-                                                            width: getHorizontalSize(15.00))),
-                                                    Padding(
-                                                        padding: getPadding(left: 5),
-                                                        child: Container(
-                                                            height: getVerticalSize(11.00),
-                                                            width: getHorizontalSize(22.00),
-                                                            child: ClipRRect(
-                                                                borderRadius:
-                                                                    BorderRadius.circular(getHorizontalSize(3.00)),
-                                                                child: LinearProgressIndicator(
-                                                                    value: 0.82,
-                                                                    valueColor: AlwaysStoppedAnimation<Color>(
-                                                                        ColorConstant.gray900))))),
-                                                    Padding(
-                                                        padding: getPadding(left: 1, top: 3, bottom: 3),
-                                                        child: CommonImageView(
-                                                            svgPath: ImageConstant.imgCombinedshape,
-                                                            height: getVerticalSize(4.00),
-                                                            width: getHorizontalSize(1.00)))
-                                                  ]))
-                                        ]))),
-                            Align(
                                 alignment: Alignment.centerLeft,
                                 child: Padding(
                                     padding: getPadding(left: 24, top: 27, right: 24),
@@ -120,7 +67,7 @@ class MarketScreen extends GetWidget<MarketController> {
                                 CustomTextFormField(
                                     width: 327,
                                     focusNode: FocusNode(),
-                                    controller: controller.inputSearchController3,
+                                    // controller: controller.inputSearchController3,
                                     hintText: "lbl_search".tr,
                                     margin: getMargin(left: 24, right: 24),
                                     variant: TextFormFieldVariant.FillGray51,
@@ -148,7 +95,7 @@ class MarketScreen extends GetWidget<MarketController> {
                                                   child: Obx(() => ListView.builder(
                                                       scrollDirection: Axis.horizontal,
                                                       physics: BouncingScrollPhysics(),
-                                                      itemCount: controller
+                                                      itemCount: this.controller
                                                           .marketModelObj.value.listrectanglethirtyItemList.length,
                                                       itemBuilder: (context, index) {
                                                         ListrectanglethirtyItemModel model = controller
@@ -429,69 +376,6 @@ class MarketScreen extends GetWidget<MarketController> {
                                           //             ]))))
                                         ]))),
                               ])))),
-                  Container(
-                      height: getVerticalSize(100.00),
-                      width: size.width,
-                      margin: getMargin(top: 33),
-                      child: Stack(alignment: Alignment.topLeft, children: [
-                        Align(
-                            alignment: Alignment.topLeft,
-                            child: Container(
-                                margin: getMargin(top: 8, bottom: 10),
-                                child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                          height: getVerticalSize(1.00),
-                                          width: size.width,
-                                          decoration: BoxDecoration(color: ColorConstant.bluegray200)),
-                                      Container(
-                                          decoration: AppDecoration.fillGray50,
-                                          child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.start,
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 57, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.lightBlueA700,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 41, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.indigo50,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 41, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.indigo50,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 41, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.indigo50,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66)))),
-                                                Container(
-                                                    height: getSize(21.00),
-                                                    width: getSize(21.00),
-                                                    margin: getMargin(left: 41, top: 20, bottom: 40),
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant.indigo50,
-                                                        borderRadius: BorderRadius.circular(getHorizontalSize(10.66))))
-                                              ]))
-                                    ])))
-                      ]))
                 ]))));
   }
 

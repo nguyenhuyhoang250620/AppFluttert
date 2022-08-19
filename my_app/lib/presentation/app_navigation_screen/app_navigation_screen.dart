@@ -596,6 +596,32 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                       width: size.width,
                                                       margin: getMargin(top: 5),
                                                       decoration: BoxDecoration(color: ColorConstant.bluegray400))
+                                                ]))),
+                                    GestureDetector(
+                                        onTap: () {
+                                          onTapBottom();
+                                        },
+                                        child: Container(
+                                            width: size.width,
+                                            decoration: AppDecoration.fillWhiteA700,
+                                            child: Column(
+                                                mainAxisSize: MainAxisSize.min,
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                children: [
+                                                  Align(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Padding(
+                                                          padding: getPadding(left: 20, top: 10, right: 20, bottom: 10),
+                                                          child: Text("lbl_expenses".tr,
+                                                              overflow: TextOverflow.ellipsis,
+                                                              textAlign: TextAlign.center,
+                                                              style:
+                                                                  AppStyle.txtRobotoRegular20Black90012.copyWith()))),
+                                                  Container(
+                                                      height: getVerticalSize(1.00),
+                                                      width: size.width,
+                                                      margin: getMargin(top: 5),
+                                                      decoration: BoxDecoration(color: ColorConstant.bluegray400))
                                                 ])))
                                   ])))))
             ]))));
@@ -704,5 +730,9 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
 
   onTapExpenses() {
     Get.toNamed(AppRoutes.expensesScreen);
+  }
+
+  onTapBottom() {
+    Get.toNamed(AppRoutes.bottomScreen);
   }
 }

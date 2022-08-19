@@ -36,60 +36,6 @@ class LogInScreen extends GetWidget<LogInController> {
                                               mainAxisAlignment: MainAxisAlignment.end,
                                               children: [
                                             Align(
-                                                alignment: Alignment.centerRight,
-                                                child: Padding(
-                                                    padding: getPadding(left: 14, top: 17, right: 14),
-                                                    child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.end,
-                                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                                        mainAxisSize: MainAxisSize.max,
-                                                        children: [
-                                                          Padding(
-                                                              padding: getPadding(bottom: 1),
-                                                              child: CommonImageView(
-                                                                  svgPath: ImageConstant.imgMusic,
-                                                                  height: getVerticalSize(11.00),
-                                                                  width: getHorizontalSize(28.00))),
-                                                          Padding(
-                                                              padding: getPadding(left: 231, top: 1, bottom: 1),
-                                                              child: Row(
-                                                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                                                  mainAxisSize: MainAxisSize.min,
-                                                                  children: [
-                                                                    Padding(
-                                                                        padding: getPadding(top: 1, bottom: 1),
-                                                                        child: CommonImageView(
-                                                                            svgPath: ImageConstant.imgMobilesignal,
-                                                                            height: getVerticalSize(10.00),
-                                                                            width: getHorizontalSize(17.00))),
-                                                                    Padding(
-                                                                        padding: getPadding(left: 5, bottom: 1),
-                                                                        child: CommonImageView(
-                                                                            svgPath: ImageConstant.imgWifi,
-                                                                            height: getVerticalSize(10.00),
-                                                                            width: getHorizontalSize(15.00))),
-                                                                    Padding(
-                                                                        padding: getPadding(left: 5),
-                                                                        child: Container(
-                                                                            height: getVerticalSize(11.00),
-                                                                            width: getHorizontalSize(22.00),
-                                                                            child: ClipRRect(
-                                                                                borderRadius: BorderRadius.circular(
-                                                                                    getHorizontalSize(3.00)),
-                                                                                child: LinearProgressIndicator(
-                                                                                    value: 0.82,
-                                                                                    valueColor:
-                                                                                        AlwaysStoppedAnimation<Color>(
-                                                                                            ColorConstant.gray900))))),
-                                                                    Padding(
-                                                                        padding: getPadding(left: 1, top: 3, bottom: 3),
-                                                                        child: CommonImageView(
-                                                                            svgPath: ImageConstant.imgCombinedshape,
-                                                                            height: getVerticalSize(4.00),
-                                                                            width: getHorizontalSize(1.00)))
-                                                                  ]))
-                                                        ]))),
-                                            Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
                                                     padding: getPadding(left: 24, top: 29, right: 24),
@@ -161,7 +107,7 @@ class LogInScreen extends GetWidget<LogInController> {
                                 text: "lbl_log_in2".tr,
                                 margin: getMargin(left: 24, right: 24),
                                 onTap: () {
-                                  Navigator.pushNamed(context, '/feed_screen');
+                                  Navigator.pushNamed(context, '/bottom_screen');
                                 },
                               ),
                               Padding(

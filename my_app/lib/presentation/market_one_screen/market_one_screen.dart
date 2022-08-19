@@ -26,7 +26,6 @@ class MarketOneScreen extends GetWidget<MarketOneController> {
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       children: [
-                                  
                                     Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(

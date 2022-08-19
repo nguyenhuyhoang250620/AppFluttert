@@ -37,6 +37,7 @@ import 'package:my_app/presentation/expenses_screen/binding/expenses_binding.dar
 import 'package:my_app/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:my_app/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import 'package:get/get.dart';
+import 'package:my_app/presentation/bottomtab/bottomtab.dart';
 
 class AppRoutes {
   static String signUpScreen = '/sign_up_screen';
@@ -76,6 +77,8 @@ class AppRoutes {
   static String appNavigationScreen = '/app_navigation_screen';
 
   static String initialRoute = '/app_navigation_screen';
+
+  static String bottomScreen = '/bottom_screen';
 
   static List<GetPage> pages = [
     GetPage(
@@ -217,6 +220,10 @@ class AppRoutes {
       bindings: [
         CalendarBinding(),
       ],
+    ),
+    GetPage(
+      name: bottomScreen,
+      page: () => BottomTab(),
     )
   ];
 }
