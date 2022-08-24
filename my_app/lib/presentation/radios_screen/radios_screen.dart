@@ -1,8 +1,10 @@
+import '../rating_dialog/controller/rating_controller.dart';
 import 'controller/radios_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/core/app_export.dart';
 import 'package:my_app/widgets/custom_button.dart';
 import 'package:my_app/widgets/custom_text_form_field.dart';
+import 'package:my_app/presentation/rating_dialog/rating_dialog.dart';
 
 class RadiosScreen extends GetWidget<RadiosController> {
   @override
@@ -15,39 +17,39 @@ class RadiosScreen extends GetWidget<RadiosController> {
                 child: Column(
                   children: [
                     Container(
-                                width: size.width,
-                                child: Container(
-                                    child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                      Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Padding(
-                                              padding: getPadding(left: 24, top: 29, right: 24),
-                                              child: Row(
-                                                  mainAxisAlignment: MainAxisAlignment.start,
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  mainAxisSize: MainAxisSize.max,
-                                                  children: [
-                                                    // GestureDetector(
-                                                    //     onTap: () {
-                                                    //       onTapImgArrowleft();
-                                                    //     },
-                                                    //     child: Padding(
-                                                    //         padding: getPadding(top: 1, bottom: 10),
-                                                    //         child: CommonImageView(
-                                                    //             svgPath: ImageConstant.imgArrowleft,
-                                                    //             height: getVerticalSize(12.00),
-                                                    //             width: getHorizontalSize(16.00)))),
-                                                    Padding(
-                                                        padding: getPadding(left: 91),
-                                                        child: Text("lbl_user_options".tr,
-                                                            overflow: TextOverflow.ellipsis,
-                                                            textAlign: TextAlign.left,
-                                                            style: AppStyle.txtInterMedium20.copyWith(height: 1.00)))
-                                                  ])))
-                                    ]))),
+                        width: size.width,
+                        child: Container(
+                            child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                              Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Padding(
+                                      padding: getPadding(left: 24, top: 29, right: 24),
+                                      child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            // GestureDetector(
+                                            //     onTap: () {
+                                            //       onTapImgArrowleft();
+                                            //     },
+                                            //     child: Padding(
+                                            //         padding: getPadding(top: 1, bottom: 10),
+                                            //         child: CommonImageView(
+                                            //             svgPath: ImageConstant.imgArrowleft,
+                                            //             height: getVerticalSize(12.00),
+                                            //             width: getHorizontalSize(16.00)))),
+                                            Padding(
+                                                padding: getPadding(left: 91),
+                                                child: Text("lbl_user_options".tr,
+                                                    overflow: TextOverflow.ellipsis,
+                                                    textAlign: TextAlign.left,
+                                                    style: AppStyle.txtInterMedium20.copyWith(height: 1.00)))
+                                          ])))
+                            ]))),
                     Expanded(
                       child: SingleChildScrollView(
                           child: Container(
@@ -56,7 +58,6 @@ class RadiosScreen extends GetWidget<RadiosController> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                            
                             Container(
                                 width: double.infinity,
                                 margin: getMargin(top: 64),
@@ -179,7 +180,18 @@ class RadiosScreen extends GetWidget<RadiosController> {
                                           width: 327,
                                           text: "lbl_i_love_it".tr,
                                           margin: getMargin(left: 24, top: 224, right: 24),
-                                          alignment: Alignment.center),
+                                          alignment: Alignment.center,
+                                          onTap: () {
+                                            Get.defaultDialog(
+                                              title: '',
+                                              content: RatingDialog(
+                                                Get.put(
+                                                  RatingController(),
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ),                                         
                                     ]))
                           ]))),
                     )

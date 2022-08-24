@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bottom_nav_cubit.dart';
 import 'package:my_app/presentation/feed_screen/feed_screen.dart';
@@ -6,6 +7,12 @@ import 'package:my_app/presentation/content_screen/content_screen.dart';
 import 'package:my_app/presentation/market_screen/market_screen.dart';
 import 'package:my_app/presentation/search_screen/search_screen.dart';
 import 'package:my_app/presentation/calendar_screen/calendar_screen.dart';
+import 'package:my_app/presentation/gallery_screen/gallery_screen.dart';
+import 'package:my_app/presentation/insights_screen/insights_screen.dart';
+import 'package:my_app/presentation/radios_screen/radios_screen.dart';
+import 'package:my_app/presentation/images_screen/images_screen.dart';
+import 'package:my_app/presentation/profile_menu_screen/profile_menu_screen.dart';
+import 'package:my_app/presentation/profile_posts_screen/profile_posts_screen.dart';
 
 class BottomTab extends StatelessWidget {
   @override
@@ -39,15 +46,24 @@ class _MainPageState extends State<MainPage> {
     MarketScreen(),
     SearchScreen(),
     CalendarScreen(),
+    GalleryScreen(),
+    InsightsScreen(),
+    RadiosScreen(),
+    ImagesScreen(),
+    ProfileMenuScreen(),
+    ProfilePostsScreen()
   ];
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<BottomNavCubit, int>(
       builder: (context, state) {
-        return Scaffold(
-          body: _buildBody(state),
-          bottomNavigationBar: _buildBottomNav(),
+        return SafeArea(
+            child: Scaffold(
+            body: _buildBody(state),
+            backgroundColor: Colors.black,
+            bottomNavigationBar: _buildBottomNav(),
+          ),
         );
       },
     );
@@ -71,7 +87,13 @@ class _MainPageState extends State<MainPage> {
         BottomNavigationBarItem(icon: Icon(Icons.date_range), label: "Task"),
         BottomNavigationBarItem(icon: Icon(Icons.apps), label: "Apps"),
         BottomNavigationBarItem(icon: Icon(Icons.notification_important), label: 'Notification'),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Caculater"),
+        BottomNavigationBarItem(icon: Icon(Icons.camera), label: "Gallery"),
+        BottomNavigationBarItem(icon: Icon(Icons.cable), label: "Insights"),
+        BottomNavigationBarItem(icon: Icon(Icons.radio), label: "Radios"),
+        BottomNavigationBarItem(icon: Icon(Icons.image), label: "Images"),
+        BottomNavigationBarItem(icon: Icon(Icons.account_balance), label: "profile"),
+        BottomNavigationBarItem(icon: Icon(Icons.settings), label: "setting")
       ],
     );
   }

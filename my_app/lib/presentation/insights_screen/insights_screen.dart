@@ -127,9 +127,10 @@ class InsightsScreen extends GetWidget<InsightsController> {
                                                     shrinkWrap: true,
                                                     separatorBuilder: (context, index) {
                                                       return Container(
-                                                          height: getVerticalSize(1.00),
-                                                          width: getHorizontalSize(327.00),
-                                                          decoration: BoxDecoration(color: ColorConstant.indigo50));
+                                                        height: getVerticalSize(1.00),
+                                                        width: getHorizontalSize(327.00),
+                                                        decoration: BoxDecoration(color: ColorConstant.indigo50),
+                                                      );
                                                     },
                                                     itemCount:
                                                         controller.insightsModelObj.value.insightsItemList.length,

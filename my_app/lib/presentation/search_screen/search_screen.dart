@@ -1,3 +1,5 @@
+import '../congratulations_dialog/congratulations_dialog.dart';
+import '../congratulations_dialog/controller/congratulations_controller.dart';
 import 'controller/search_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/core/app_export.dart';
@@ -66,69 +68,95 @@ class SearchScreen extends GetWidget<SearchController> {
                                           alignment: Alignment.center),
                                       Padding(
                                           padding: getPadding(left: 24, top: 58, right: 24),
-                                          child: Text("lbl_search_result".tr,
+                                          child: TextButton(
+                                            onPressed: () {
+                                              Get.defaultDialog(
+                                              title: '',
+                                              content: CongratulationsDialog(
+                                                Get.put(
+                                                  CongratulationsController(),
+                                                ),
+                                              ),
+                                            );
+                                            }, 
+                                            child: Text("lbl_search_result".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
-                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00))),
+                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00)))),
                                       Container(
                                           height: getVerticalSize(1.00),
                                           width: getHorizontalSize(327.00),
-                                          margin: getMargin(left: 24, top: 15, right: 24),
+                                          margin: getMargin(left: 24, right: 24),
                                           decoration: BoxDecoration(color: ColorConstant.indigo50)),
                                       Padding(
-                                          padding: getPadding(left: 24, top: 15, right: 24),
-                                          child: Text("lbl_search_result".tr,
+                                          padding: getPadding(left: 24,  right: 24),
+                                          child: TextButton(
+                                            onPressed: () {
+                                            }, 
+                                            child: Text("lbl_search_result".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
-                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00))),
+                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00)))),
                                       Container(
                                           height: getVerticalSize(1.00),
                                           width: getHorizontalSize(327.00),
-                                          margin: getMargin(left: 24, top: 15, right: 24),
+                                          margin: getMargin(left: 24,  right: 24),
                                           decoration: BoxDecoration(color: ColorConstant.indigo50)),
                                       Padding(
-                                          padding: getPadding(left: 24, top: 15, right: 24),
-                                          child: Text("lbl_search_result".tr,
+                                          padding: getPadding(left: 24, right: 24),
+                                          child: TextButton(
+                                            onPressed: () {
+                                            }, 
+                                            child: Text("lbl_search_result".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
-                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00))),
+                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00)))),
                                       Container(
                                           height: getVerticalSize(1.00),
                                           width: getHorizontalSize(327.00),
-                                          margin: getMargin(left: 24, top: 15, right: 24),
+                                          margin: getMargin(left: 24, right: 24),
                                           decoration: BoxDecoration(color: ColorConstant.indigo50)),
                                       Padding(
-                                          padding: getPadding(left: 24, top: 15, right: 24),
-                                          child: Text("lbl_search_result".tr,
+                                          padding: getPadding(left: 24, right: 24),
+                                          child: TextButton(
+                                            onPressed: () {
+                                            }, 
+                                            child: Text("lbl_search_result".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
-                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00))),
+                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00)))),
                                       Container(
                                           height: getVerticalSize(1.00),
                                           width: getHorizontalSize(327.00),
-                                          margin: getMargin(left: 24, top: 15, right: 24),
+                                          margin: getMargin(left: 24, right: 24),
                                           decoration: BoxDecoration(color: ColorConstant.indigo50)),
                                       Padding(
-                                          padding: getPadding(left: 24, top: 15, right: 24),
-                                          child: Text("lbl_search_result".tr,
+                                          padding: getPadding(left: 24, right: 24),
+                                          child: TextButton(
+                                            onPressed: () {
+                                            }, 
+                                            child: Text("lbl_search_result".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
-                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00))),
+                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00)))),
                                       Container(
                                           height: getVerticalSize(1.00),
                                           width: getHorizontalSize(327.00),
-                                          margin: getMargin(left: 24, top: 15, right: 24),
+                                          margin: getMargin(left: 24, right: 24),
                                           decoration: BoxDecoration(color: ColorConstant.indigo50)),
                                       Padding(
-                                          padding: getPadding(left: 24, top: 15, right: 24),
-                                          child: Text("lbl_search_result".tr,
+                                          padding: getPadding(left: 24, right: 24),
+                                          child: TextButton(
+                                            onPressed: () {
+                                            }, 
+                                            child: Text("lbl_search_result".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
-                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00))),
+                                              style: AppStyle.txtInterRegular16.copyWith(height: 1.00)))),
                                       Container(
                                           height: getVerticalSize(1.00),
                                           width: getHorizontalSize(327.00),
-                                          margin: getMargin(left: 24, top: 15, right: 24),
+                                          margin: getMargin(left: 24, right: 24),
                                           decoration: BoxDecoration(color: ColorConstant.indigo50)),
                                     ]))
                           ]))),

@@ -37,16 +37,16 @@ class MarketScreen extends GetWidget<MarketController> {
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          GestureDetector(
-                                              onTap: () {
-                                                onTapImgArrowleft();
-                                              },
-                                              child: Padding(
-                                                  padding: getPadding(top: 2, bottom: 5),
-                                                  child: CommonImageView(
-                                                      svgPath: ImageConstant.imgArrowleft,
-                                                      height: getVerticalSize(12.00),
-                                                      width: getHorizontalSize(16.00)))),
+                                          // GestureDetector(
+                                          //     onTap: () {
+                                          //       onTapImgArrowleft();
+                                          //     },
+                                          //     child: Padding(
+                                          //         padding: getPadding(top: 2, bottom: 5),
+                                          //         child: CommonImageView(
+                                          //             svgPath: ImageConstant.imgArrowleft,
+                                          //             height: getVerticalSize(12.00),
+                                          //             width: getHorizontalSize(16.00)))),
                                           Padding(
                                               padding: getPadding(left: 117),
                                               child: Text("lbl_market".tr,

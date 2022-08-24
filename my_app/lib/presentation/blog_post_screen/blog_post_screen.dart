@@ -11,6 +11,9 @@ class BlogPostScreen extends GetWidget<BlogPostController> {
             body: Container(
                 width: size.width,
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Container(
                       child: Align(
@@ -31,16 +34,16 @@ class BlogPostScreen extends GetWidget<BlogPostController> {
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  // GestureDetector(
-                                                  //     onTap: () {
-                                                  //       onTapImgArrowleft();
-                                                  //     },
-                                                  //     child: Padding(
-                                                  //         padding: getPadding(top: 2, bottom: 5),
-                                                  //         child: CommonImageView(
-                                                  //             svgPath: ImageConstant.imgArrowleft,
-                                                  //             height: getVerticalSize(12.00),
-                                                  //             width: getHorizontalSize(16.00)))),
+                                                  GestureDetector(
+                                                      onTap: () {
+                                                        onTapImgArrowleft();
+                                                      },
+                                                      child: Padding(
+                                                          padding: getPadding(top: 2, bottom: 5),
+                                                          child: CommonImageView(
+                                                              svgPath: ImageConstant.imgArrowleft,
+                                                              height: getVerticalSize(12.00),
+                                                              width: getHorizontalSize(16.00)))),
                                                   Padding(
                                                       padding: getPadding(left: 112),
                                                       child: Text("lbl_content".tr,

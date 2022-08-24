@@ -60,9 +60,9 @@ class FeedScreen extends GetWidget<FeedController> {
                                       CustomTextFormField(
                                           width: 327,
                                           focusNode: FocusNode(),
-                                          // controller: controller.inputSearchController2,
+                                          controller: controller.inputSearchController2,
                                           hintText: "lbl_search".tr,
-                                          margin: getMargin(left: 24, right: 24),
+                                          margin: getMargin(left: 10, right: 24),
                                           variant: TextFormFieldVariant.FillGray51,
                                           fontStyle: TextFormFieldFontStyle.InterRegular14,
                                           textInputAction: TextInputAction.done,
@@ -70,7 +70,7 @@ class FeedScreen extends GetWidget<FeedController> {
                                       Align(
                                           alignment: Alignment.center,
                                           child: Padding(
-                                              padding: getPadding(left: 24, top: 26, right: 24),
+                                              padding: getPadding(left: 10, top: 26, right: 24),
                                               child: Obx(() => ListView.separated(
                                                   physics: BouncingScrollPhysics(),
                                                   shrinkWrap: true,

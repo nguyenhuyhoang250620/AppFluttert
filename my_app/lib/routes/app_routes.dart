@@ -76,7 +76,7 @@ class AppRoutes {
 
   static String appNavigationScreen = '/app_navigation_screen';
 
-  static String initialRoute = '/app_navigation_screen';
+  static String initialRoute = '/sign_up_screen';
 
   static String bottomScreen = '/bottom_screen';
 
@@ -221,9 +221,18 @@ class AppRoutes {
         CalendarBinding(),
       ],
     ),
-    GetPage(
-      name: bottomScreen,
-      page: () => BottomTab(),
-    )
+    GetPage(name: bottomScreen, page: () => BottomTab(), bindings: [
+      FeedBinding(),
+      MarketBinding(),
+      ContentBinding(),
+      SearchBinding(),
+      CalendarBinding(),
+      GalleryBinding(),
+      InsightsBinding(),
+      RadiosBinding(),
+      ImagesBinding(),
+      ProfilePostsBinding(),
+      ProfileMenuBinding()
+    ])
   ];
 }

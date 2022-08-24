@@ -1,7 +1,10 @@
+import 'package:my_app/presentation/expenses_screen/binding/expenses_binding.dart';
+
 import '../controller/insights_controller.dart';
 import '../models/insights_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/core/app_export.dart';
+import 'package:my_app/presentation/expenses_screen/expenses_screen.dart';
 
 // ignore: must_be_immutable
 class InsightsItemWidget extends StatelessWidget {
@@ -48,24 +51,25 @@ class InsightsItemWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: getPadding(
-                    left: 16,
-                    top: 1,
-                  ),
-                  child: Text(
-                    "lbl_item".tr,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.left,
-                    style: AppStyle.txtInterRegular16.copyWith(
-                      height: 1.00,
+                    padding: getPadding(
+                      left: 16,
+                      top: 1,
                     ),
-                  ),
-                ),
+                    child: TextButton(
+                      style: ButtonStyle(
+                        foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                      ),
+                      onPressed: () {
+                        Get.to(ExpensesScreen(), binding: ExpensesBinding());
+                        // Navigator.push(context, MaterialPageRoute(builder: (context) => ExpensesScreen()));
+                      },
+                      child: Text('Item'),
+                    )),
               ],
             ),
             Padding(
               padding: getPadding(
-                left: 202,
+                left: 170,
                 top: 1,
                 bottom: 1,
               ),

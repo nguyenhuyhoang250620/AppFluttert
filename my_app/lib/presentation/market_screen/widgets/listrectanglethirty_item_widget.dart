@@ -1,7 +1,10 @@
+import 'package:my_app/presentation/blog_post_screen/binding/blog_post_binding.dart';
+
 import '../controller/market_controller.dart';
 import '../models/listrectanglethirty_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/core/app_export.dart';
+import 'package:my_app/presentation/blog_post_screen/blog_post_screen.dart';
 
 // ignore: must_be_immutable
 class ListrectanglethirtyItemWidget extends StatelessWidget {
@@ -40,6 +43,15 @@ class ListrectanglethirtyItemWidget extends StatelessWidget {
                       10.00,
                     ),
                   ),
+                ),
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 20),
+                  ),
+                  onPressed: (() {
+                    Get.to(BlogPostScreen(), binding: BlogPostBinding());
+                  }),
+                  child: Text(""),
                 ),
               ),
               Container(
